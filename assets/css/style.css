@@ -89,7 +89,15 @@ background-color: black;
 border: 1px solid black;
 }
 
-
+h2 span { 
+   color: white;
+   font-size: larger; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0); /* fallback color */
+   background: rgba(0, 0, 0, 0.7);
+   padding: 10px;
+   padding:0 15px;
+}
 /* =============================================================
    SLIDESHOW / CAROUSEL STYLES
  ============================================================ */
