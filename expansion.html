@@ -7,13 +7,17 @@
 <style>
 body,h1 {font-family: "Raleway", sans-serif}
 body, html {height: 100%}
-.bgimg {
-    background-image: url('assets/img/Tor_Fresa.jpg');
-    background-size: 400px 200px;
-    min-height: 110%;
-    background-position: center;
-    background-size: cover;
-}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+.w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+.w3-third img:hover{opacity: 1}
 </style>
 <head>
     <meta charset="utf-8" />
@@ -79,16 +83,50 @@ body, html {height: 100%}
      <!-- MENU SECTION END-->
    <body>
 
-<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
- 
-  <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">MUY PRONTO</h1>
-    <hr class="w3-border-grey" style="margin:auto;width:40%">
+<div class="w3-row">
+    <div class="w3-third">
+     
+      <img src="C:\Users\JocsanLap\Documents\Hatso\HatsoWeb-master\HatsoWeb-master\assets\img\Reciclatron.jpg" style="width:100%" onclick="onClick(this)" alt="Jornadas de acopio de residuos electrónicos y eléctricos">
+     
+    </div>
+
+    <div class="w3-third">
+     
+      <img src="C:\Users\JocsanLap\Documents\Hatso\HatsoWeb-master\HatsoWeb-master\assets\img\macetas.jpg" style="width:100%" onclick="onClick(this)" alt="Obras de artes hechas de basura">
+     
+    </div>
     
+    <div class="w3-third">
+      
+      <img src="C:\Users\JocsanLap\Documents\Hatso\HatsoWeb-master\HatsoWeb-master\assets\img\LOGO_PT.png" style="width:100%" onclick="onClick(this)" alt="Limpiando la ciudad, mientras nos ejercitamos">
+      
+    </div>
   </div>
 
-    
+  <!-- Pagination -->
+ <!-- <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">«</a>
+      <a href="#" class="w3-bar-item w3-black w3-button">1</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">2</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">3</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">4</a>
+      <a href="#" class="w3-bar-item w3-button w3-hover-black">»</a>
+    </div>
+  </div>-->
+  
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
   </div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
 </div>
  <div class="row">
  	  <div class="footer-sec">
@@ -143,6 +181,27 @@ body, html {height: 100%}
     <script src="assets/js/jquery.flexslider.js"></script>
      <!--CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
+    <script>
+// Script to open and close sidebar
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+</script>
 </body>
 
 </html>
